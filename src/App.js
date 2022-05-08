@@ -1,7 +1,10 @@
+import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import NavBar from './components/NavBar'
+import Roteador from './routes';
+
 
 function App() {
   const caminhos = [
@@ -29,7 +32,10 @@ function App() {
 
   return (
     <div>
-      <NavBar menu={caminhos} />
+        <BrowserRouter>
+          <NavBar menu={caminhos} />
+          <Roteador />
+        </BrowserRouter>
     </div>
   );
 }
